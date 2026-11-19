@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>InclusiveGrowth.AI – An alternative approach to AI’s impact on our economy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141110;--bg2:#1d1815;--ink:#efeae2;--mute:#a79f94;--clay:#c1603c;--clay2:#e08a66;--cream:#efeae2;--line:#3a332d;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.55 "Space Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+h1,h2,h3{font-weight:700;line-height:1.02;margin:0;text-transform:uppercase;letter-spacing:-.01em}
+h2{font-size:clamp(34px,6vw,64px);margin-bottom:20px}
+h3{font-size:22px;line-height:1.15;margin-bottom:10px}
+.clay{color:var(--clay)}
+.lede{font-size:clamp(19px,2.2vw,24px);max-width:62ch;color:var(--ink)}
+p{margin:0 0 14px;max-width:68ch}
+.mute{color:var(--mute)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:20px;text-decoration:none}
+.logo span{color:var(--clay)}
+.bar nav{display:flex;gap:20px;font-size:15px;flex-wrap:wrap}
+.bar nav a{text-decoration:none;color:var(--mute)}
+.bar nav a:hover,.bar nav a:focus-visible{color:var(--ink)}
+:focus-visible{outline:2px solid var(--clay2);outline-offset:3px}
+.hero{border:0;padding:56px 0 110px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(44px,9.5vw,128px);max-width:11ch}
+.orb{position:absolute;right:-60px;top:20px;width:clamp(120px,18vw,220px);aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,var(--clay2),var(--clay))}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--bg2);border:1px solid var(--line);padding:28px;border-radius:4px}
+.stat{padding:32px;display:flex;flex-direction:column;min-height:320px;border-radius:4px}
+.stat .n{font-size:clamp(48px,6.5vw,76px);font-weight:700;line-height:1;margin-bottom:16px}
+.stat p{font-size:20px;font-weight:500}
+.stat small{margin-top:auto;font-size:14px;opacity:.8}
+.s1{background:var(--clay);color:var(--cream)}
+.s2{background:var(--cream);color:#141110}
+.s2 .n{color:var(--clay)}
+.s3{background:var(--bg2);border:1px solid var(--line)}
+.s3 .n{color:var(--clay2)}
+.pair{display:grid;gap:48px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.pair h3{color:var(--clay2)}
+.vision .card p{font-size:24px;font-weight:500;line-height:1.25;margin:0}
+.vision b{color:var(--clay2);font-weight:700}
+.lens{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin-top:28px;border:1px dashed var(--mute)}
+.lens div{padding:18px;border-right:1px dashed var(--mute)}
+.lens div:last-child{border-right:0}
+.lens .on{background:var(--cream);color:#141110}
+.lens strong{display:block;margin-bottom:4px}
+.lens div:not(.on) strong{color:var(--clay2)}
+.lens span{font-size:15px;color:var(--mute)}
+.lens .on span{color:#4a423b}
+.people{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:32px 0}
+.person{display:flex;gap:16px;align-items:center}
+.av{flex:none;width:64px;height:64px;border-radius:50%;background:var(--clay);color:var(--cream);display:grid;place-items:center;font-weight:700;font-size:20px}
+.person b{display:block;font-size:20px;line-height:1.15}
+.person .r{color:var(--clay2);font-size:16px;line-height:1.3}
+.person .o{color:var(--mute);font-size:14px;line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{background:var(--cream);color:#141110;padding:6px 14px;font-weight:500;font-size:15px}
+.chips.dim span{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.who-list{list-style:none;padding:0;margin:0}
+.who-list li{padding:10px 0;border-bottom:1px solid var(--line)}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:20px;align-items:center;margin-top:32px}
+.flow h3{color:var(--clay2);border-bottom:2px solid var(--clay);padding-bottom:10px}
+.flow ul{list-style:none;padding:0;margin:0;font-weight:500;font-size:20px}
+.flow li{padding:6px 0}
+.flow .core{background:var(--bg2);border:1px solid var(--line);padding:24px}
+.flow .core li{color:var(--clay2);font-weight:700}
+.arrow{font-size:36px;color:var(--clay)}
+@media(max-width:820px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}}
+.plan{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:32px}
+.plan .card h3{color:var(--clay2)}
+.plan .card p{margin:0;color:var(--mute);font-size:17px}
+.center{background:linear-gradient(135deg,var(--clay2),var(--clay));border:0;color:var(--cream)}
+.center p{color:var(--cream);font-weight:700;font-size:26px;line-height:1.1;text-transform:uppercase}
+.use .q{font-style:italic;font-size:19px;margin-bottom:10px}
+.use .card small{display:block;color:var(--clay2);font-weight:700;margin-bottom:10px;font-size:16px}
+.use .card p{color:var(--mute);font-size:16px;margin:0}
+.steps{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));border-top:3px solid var(--clay);margin-top:36px}
+.steps>div{padding:28px 28px 28px 0}
+.steps>div+div{padding-left:28px;border-left:1px solid var(--line)}
+@media(max-width:820px){.steps>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+.steps .len{color:var(--clay2);font-weight:700;margin-bottom:6px}
+.opt{background:var(--clay);color:var(--cream);padding:24px 28px;margin-top:8px}
+.opt p{margin:0;max-width:none}
+.end{background:var(--clay);color:#141110;border:0}
+.end h2{font-size:clamp(44px,10vw,140px)}
+.end a{font-weight:700;font-size:24px}
+footer{padding:28px 0;color:var(--mute);font-size:14px}
+</style>
+</head>
+<body>
+<header class="wrap bar">
+  <a class="logo" href="#top">InclusiveGrowth<span>.AI</span></a>
+  <nav aria-label="Sections">
+    <a href="#moment">The moment</a><a href="#problem">The problem</a><a href="#team">Team</a><a href="#offerings">Offerings</a><a href="#use-cases">Use cases</a><a href="#engage">Work with us</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="orb" aria-hidden="true"></div>
+  <h1>An alternative approach to AI’s impact on <span class="clay">our economy.</span></h1>
+</div></section>
+
+<section id="moment"><div class="wrap">
+  <h2>AI is repricing every regional economy</h2>
+  <div class="grid g3" style="margin-top:36px">
+    <div class="stat s1"><div class="n">$19.9T</div><p>AI’s cumulative add to the global economy through 2030 — about 3.5% of global GDP.</p><small>IDC, 2025</small></div>
+    <div class="stat s2"><div class="n">$2.84T</div><p>Potential add to U.S. GDP by 2030 under rapid generative-AI adoption.</p><small>KPMG, 2025</small></div>
+    <div class="stat s3"><div class="n">2.1→2.3%</div><p>U.S. potential GDP growth accelerates into the early 2030s as AI compounds.</p><small>Goldman Sachs, 2025</small></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Huge potential, for bad and good</h2>
+  <p class="lede">To state the obvious, AI has huge potential… for bad and good.</p>
+  <div class="pair" style="margin-top:40px">
+    <div>
+      <h3>What’s true</h3>
+      <p>AI is (rightly) creating fear on safety, massive upheaval on society, and a potential loss of jobs.</p>
+      <p>Communities (rightly) feel like this major shift is happening to them, without their input, and fast.</p>
+      <p>These things are true. And we need to invest the time, resources, and expertise for a generational effort to ensure AI is built in humanity’s best interest.</p>
+    </div>
+    <div>
+      <h3>What’s possible, in parallel</h3>
+      <p>Communities have the opportunity to shape the policies, applications, and investment in AI to build a better future.</p>
+      <p>Build applications that work for us and with us. Build governance that incorporates our perspectives. And build economies, industries and jobs that work for all.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="vision"><div class="wrap">
+  <h2 class="clay">Vision</h2>
+  <div class="grid g3" style="margin-top:32px">
+    <div class="card"><p>What if we consistently prepared for <b>technology transition</b>?</p></div>
+    <div class="card"><p>What if our regions knew <b>where to invest</b>, what <b>infrastructure to ready</b>?</p></div>
+    <div class="card"><p>…and <b>jobs to anticipate</b>?</p></div>
+  </div>
+</div></section>
+
+<section id="problem"><div class="wrap">
+  <h2><span class="clay">Flying blind</span></h2>
+  <p class="lede">Communities, investors, and public sector leaders are flying blind on the impact of AI on their economies.</p>
+  <div class="grid g3" style="margin-top:36px">
+    <div class="card"><h3 class="clay">Wild range</h3><p>There is a wild range of impacts, from a 1% shift in job mix to 20% unemployment.</p></div>
+    <div class="card"><h3 class="clay">Incomplete</h3><p>Most research only articulates “exposure”: the potential impact on automation of job tasks. Not the direction, time and local lenses.</p></div>
+    <div class="card"><h3 class="clay">Narrow action</h3><p>Most solutions focus on retraining, not on how firms, industries and whole economies can adapt and grow with the potential of AI.</p></div>
+  </div>
+  <div class="lens" role="list">
+    <div class="on" role="listitem"><strong>Exposure</strong><span>Automation of job tasks</span></div>
+    <div role="listitem"><strong>Direction</strong><span>Impact of elasticity on the industry</span></div>
+    <div role="listitem"><strong>Time</strong><span>Time it will take to adopt AI in the industry</span></div>
+    <div role="listitem"><strong>Local lens</strong><span>How it’s impacting individual economies</span></div>
+  </div>
+</div></section>
+
+<section id="team"><div class="wrap">
+  <h2>Who we are</h2>
+  <p class="lede">A non-profit of technologists, public servants and AI safety experts building growth strategies for all Americans as technology changes, starting with AI.</p>
+  <div class="pair" style="margin:36px 0 12px">
+    <div><h3>A non-profit staffed by</h3><ul class="who-list"><li>Technologists</li><li>Public servants</li><li>AI safety experts</li></ul></div>
+    <div><h3>Who we work with</h3><ul class="who-list"><li>Civic organizations</li><li>Public sector leaders</li><li>Industry groups</li><li>Investors</li><li>Business leaders</li></ul></div>
+  </div>
+  <h2 style="margin-top:64px">Team</h2>
+  <p class="lede">Developed by professionals who have led through major technological, cultural and economic shifts.</p>
+  <div class="people">
+    <div class="person"><div class="av" aria-hidden="true">SD</div><div><b>Shaina Doar</b><div class="r">Economic development strategy</div><div class="o">McKinsey, City of Chicago, Google, Onward Ventures</div></div></div>
+    <div class="person"><div class="av" aria-hidden="true">BB</div><div><b>Brenna Berman</b><div class="r">Public sector technology</div><div class="o">IBM, City of Chicago, City Tech</div></div></div>
+    <div class="person"><div class="av" aria-hidden="true">JM</div><div><b>Justin Massa</b><div class="r">Cross-industry AI</div><div class="o">Techstars, IDEO, Newlab, Remix</div></div></div>
+  </div>
+  <div class="pair">
+    <div class="card">
+      <h3 class="clay">Example experts</h3>
+      <p class="mute" style="margin:0">Technical product guidance</p><div class="chips"><span>2389 Research</span></div>
+      <p class="mute" style="margin:16px 0 0">Research-based guidance</p><div class="chips"><span>University of Chicago</span></div>
+      <p class="mute" style="margin:16px 0 0">Fed economist</p><div class="chips"><span>Chicago Fed</span></div>
+    </div>
+    <div class="card">
+      <h3 class="clay">Current advisers</h3>
+      <div class="people" style="margin:12px 0 0">
+        <div class="person"><div class="av" aria-hidden="true">JS</div><div><b>Josh Sirefman</b><div class="r">Real estate / econ dev</div></div></div>
+        <div class="person"><div class="av" aria-hidden="true">MC</div><div><b>Maurice Classen</b><div class="r">Cultural and economic transformation</div></div></div>
+        <div class="person"><div class="av" aria-hidden="true">AH</div><div><b>Alyssa Harvey Dawson</b><div class="r">Technical safety</div></div></div>
+        <div class="person"><div class="av" aria-hidden="true">MM</div><div><b>Matt Muench</b><div class="r">Workforce &amp; skills</div><div class="o">JPMorgan, Ballmer Group</div></div></div>
+        <div class="person"><div class="av" aria-hidden="true">ER</div><div><b>Elle Ramel</b><div class="r">Economic development</div></div></div>
+        <div class="person"><div class="av" aria-hidden="true">HR</div><div><b>Harper Reed</b><div class="r">Product</div></div></div>
+      </div>
+    </div>
+  </div>
+  <p class="mute" style="margin-top:28px">Experience comprised of</p>
+  <div class="chips dim"><span>Google</span><span>City of New York</span><span>NYCEDC</span><span>City of Chicago</span><span>McKinsey</span><span>Ballmer Group</span><span>JPMorgan</span><span>MacArthur</span><span>IDEO</span><span>Brookfield</span><span>Georgetown</span></div>
+</div></section>
+
+<section id="offerings"><div class="wrap">
+  <h2>Offerings</h2>
+  <p class="lede">InclusiveGrowth.ai brings timely, research-backed information, strategies, and investments to parties seeking to identify and capture economic and industry opportunity for their communities based on technological change.</p>
+  <div class="grid g3" style="margin-top:36px">
+    <div class="card"><h3 class="clay">Data platform</h3><p>Dynamic, research backed, hyper local.</p></div>
+    <div class="card"><h3 class="clay">Strategy engagements</h3><p>Diagnostic, strategies for growth, investment plans.</p></div>
+    <div class="card"><h3 class="clay">Thought leadership &amp; convenings</h3><p>Publications, curated workshops, convenings.</p></div>
+  </div>
+  <p class="mute" style="margin-top:20px">Together they turn technological change (AI and what comes next) into local opportunity: economies, industries, jobs.</p>
+
+  <h2 style="margin-top:80px">Data platform</h2>
+  <p class="lede">A platform powered by a dynamic data engine that evaluates and integrates the latest AI research into local insights for ongoing decision-making.</p>
+  <div class="flow">
+    <div><h3>Inputs</h3><ul><li>Research backed</li><li>Expert reviewed</li><li>Multiple data sources</li><li>Local</li></ul></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="core"><h3>InclusiveGrowth.AI platform</h3><ul><li>Interactive data</li><li>Multi-stakeholder</li><li>Open</li><li>Up-to-date</li></ul></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div><h3>Strategy and action</h3><ul><li>Initial diagnostic</li><li>Ongoing analysis</li><li>Actionable insights</li><li>Activation partners</li></ul></div>
+  </div>
+
+  <h2 style="margin-top:80px">Strategy</h2>
+  <p class="lede">A response rooted in facts, localized to each community, scenario planning for dynamic roadmaps, and practical strategies to invest in today, tomorrow and in the future.</p>
+  <div class="plan">
+    <div class="card center"><p>The AI strategic growth plan</p></div>
+    <div class="card"><h3>Economic make-up</h3><p>Map where the industry mix is exposed — and what to grow on purpose.</p></div>
+    <div class="card"><h3>Governance &amp; participation</h3><p>Set guardrails and transparency that make the whole agenda politically durable.</p></div>
+    <div class="card"><h3>Operational efficiency</h3><p>Put AI to work inside government — faster service, lower cost-to-serve.</p></div>
+    <div class="card"><h3>Workforce strategy</h3><p>Reskill toward judgment and human-facing roles; build apprenticeships for what AI creates.</p></div>
+    <div class="card"><h3>Physical implications</h3><p>Translate changing work into demand for space, and reposition vulnerable stock early.</p></div>
+    <div class="card"><h3>Infrastructure impact</h3><p>Plan data centers, energy, water and mobility together — powered without soaking residents.</p></div>
+    <div class="card"><h3>Startup &amp; SMB growth</h3><p>Seed new companies and drive Main Street adoption that keeps gains local.</p></div>
+  </div>
+</div></section>
+
+<section id="use-cases" class="use"><div class="wrap">
+  <h2>Use <span class="clay">cases</span></h2>
+  <div class="grid g3" style="margin-top:32px">
+    <div class="card"><small>Government</small><div class="q">“Which local industries will AI grow, shrink, or reshape, and when?”</div><p>Target incentives, site selection, and business attraction toward sectors with positive AI demand effects. Stress-test budget and tax-base forecasts against AI adoption scenarios.</p></div>
+    <div class="card"><small>Investors</small><div class="q">“Where is AI creating durable local opportunity worth capital?”</div><p>Identify underinvested firms and corridors positioned to benefit from AI adoption. Assess AI risk across loan and investment portfolios concentrated in exposed industries.</p></div>
+    <div class="card"><small>Community leaders</small><div class="q">“What does AI mean for the jobs and businesses in our neighborhood?”</div><p>Bring a neighborhood-level view of AI impact to the table when public and private investments are being decided. Ground community visioning and advocacy in shared, transparent data.</p></div>
+    <div class="card"><small>Firm leaders</small><div class="q">“How will AI change demand in our industry here, not just nationally?”</div><p>Plan hiring, upskilling, and AI adoption with a local lens on competitors and talent supply. Coordinate sector-wide responses through chambers and industry partnerships.</p></div>
+    <div class="card"><small>Universities, community colleges, workforce boards</small><div class="q">“Which programs should we grow, sunset, or redesign over the next five years?”</div><p>Align program portfolios and capital plans with projected regional demand. Build employer partnerships around industries expected to grow with AI.</p></div>
+    <div class="card"><small>Philanthropy and regional funders</small><div class="q">“Where will our grants have the greatest impact on economic opportunity?”</div><p>Direct grantmaking toward the communities and sectors most affected, and use one shared fact base to align multiple funders in a region.</p></div>
+  </div>
+</div></section>
+
+<section id="engage"><div class="wrap">
+  <h2>A focused diagnostic, then a durable partnership</h2>
+  <p class="lede">You are left with an integrated strategy, a first set of lasting tools, and new capability inside your team.</p>
+  <div class="steps">
+    <div><h3>The Sprint</h3><div class="len">6 weeks</div><p>Diagnostic with strategy workshops across three topical areas of your choice: sector strategy, innovation engine, workforce training, infrastructure, built environment, governance, or government operations.</p></div>
+    <div><h3>The Deep Dive</h3><div class="len">4 months</div><p>Starts with a diagnostic, with an option to integrate client data. Includes 5 workshops with experts to determine strategies across all enablers, and 3 unique tools built for ongoing use in your operations.</p></div>
+    <div><h3>The Embed</h3><div class="len">1 year</div><p>Starts with a diagnostic, then builds internal capabilities for ongoing execution. Monthly expert workshops set strategies and investments across each enabler, with support launching execution, evaluation of initial impact, and tool building.</p></div>
+  </div>
+  <div class="opt"><p><strong>Optional ongoing support:</strong> GovOps sprints, tool maintenance, workforce &amp; community programming, workshops, capability building, and a standing analytics capability with actions.</p></div>
+</div></section>
+
+<section class="end"><div class="wrap">
+  <h2>Discussion</h2>
+  <a href="https://inclusivegrowth.ai">inclusivegrowth.ai</a>
+</div></section>
+</main>
+<footer><div class="wrap">InclusiveGrowth.AI</div></footer>
+</body>
+</html>
